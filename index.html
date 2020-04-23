@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html  lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Movimento VS DLC</title>
+
+ <style type="text/css">
+
+ 	#fundo{
+ 		z-index: 1;
+ 		position: absolute;
+ 	}
+
+    #warning-message { display: none; }
+    @media only screen and (orientation:portrait){
+        #wrapper { display:none; }
+        #warning-message { display:block; }
+    }
+    @media only screen and (orientation:landscape){
+        #warning-message { display:none; }
+    }
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+    p{
+        font-size: 10px;
+    }
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    p{
+        font-size: 12px;
+    }
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+    p{
+        font-size: 14px;
+    }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    p{
+        font-size: 9px;
+    }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    p{
+        font-size: 7px;
+    }
+}
+
+.modalDialog {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+.modalDialog:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modalDialog > div {
+  width: 65%;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 10px;
+  background: #fff;
+  background: -moz-linear-gradient(#fff, #999);
+  background: -webkit-linear-gradient(#fff, #999);
+  background: -o-linear-gradient(#fff, #999);
+}
+.close {
+  background: #606061;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+  background: #00d9ff;
+}
+</style>
+
+</head>
+
+<body ondragstart='return false'>
+
+<div id="wrapper">
+
+<img src="assets/imgs/bg.jpg" id="fundo" style="width:100%; height:100%;">
+
+<a href="www.google.com" title="TESTE" style="position: absolute; left: 58.69%; top: 38.97%; width: 5.74%; height: 18.04%; z-index: 2;"></a>
+
+<a href="#openModal2" title="TESTE2" style="position: absolute; left: 40.16%; top: 39.48%; width: 9.4%; height: 18.56%; z-index: 2;"></a>
+
+<a href="#openModal" title="DEFISIO UFC" style="position: absolute; left: 72.9%; top: 51.65%; width: 5.48%; height: 11.34%; z-index: 2;"></a>
+
+    <div id="openModal" class="modalDialog">
+  <div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>Popup</h2>
+    <p>Este infográfico interativo destina-se a pessoas que tem dor na região mais baixa das costas (dor lombar) a mais de três meses.</p> <p>Aqui você encontrará informações baseadas em estudos científicos, profissionais da saúde e pacientes com dor lombar que lhe ajudarão a gerenciar essa condição e ter mais qualidade de vida. Para utilizar o Infográfico clique e arraste opersonagem desanimado e com dor na costas indicado pela seta vermelha, até os demais personagens e elementos para que ele aprenda uma informação de cada vez.</p> <p>Essa é uma iniciativa do Projeto Movimento do Departamento de Fisioterapia e da disciplina (colocar o nome da disciplina de vocês) do Departamento de Sistemas e Mídias Digitais da Universidade Federal do Ceará, com apoio do CNPq.</p>
+  </div>
+</div>
+
+    <div id="openModal2" class="modalDialog">
+  <div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>TESTE</h2>
+    <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+  </div>
+</div>
+
+</div>
+<div id="warning-message">
+  <h1 style="text-align: center;">Para uma melhor visualização e uso, vire o seu celular para o modo paisagem! :D</h1>
+</div>
+
+	
+</body>
+
+</html>
